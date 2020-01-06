@@ -77,6 +77,6 @@ or via telnet:
 ```
   # mdb set admin_passwd "012345"
 ```
-* Dumping /dev/mem over tftp is not a problem. 128M, 134217728 bytes.
+* Dumping /dev/mem over tftp is not a problem. 128 MiB, 134217728 bytes.
 
 * I am just above clueless about Python
