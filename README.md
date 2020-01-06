@@ -5,6 +5,8 @@ First of all: THANKS bmork! I would not have got started without your defogger f
 
 The script is totally based on bmork's original dcs8000lh-configure.py, which got me hopeful that the 8600 would be just as "easy". Since then I've changed by mind on the easy part.
 
+What's changed? The bluetoothd on the 8600 had a new patch to the gatt-example.c which quoted the arguments to set admin_passwd and tokenized the entire string received, so no semicolons (;) are possible in the otherwise arbitrary commands you can send to the default firmware with dcs8600.py.
+
 Things learned so far, in no order:
 
 * My laptop refused to change MTU on the BTLE packets, so nothing got sent in it's entirety, so I did all the BTLE communication with the camera from a Raspberry Pi 3 (Raspbian stretch/9.6, Bluez 5.43)
@@ -22,7 +24,6 @@ or
   $ dcs8600.py 00:11:22:33:44:55 012345 --command "/bin/echo>/tmp/SDCard/.tw_enable_telnet"
   $ dcs8600.py 00:11:22:33:44:55 012345 --command "reboot"
 ```
-
 * telnet login: root:twipc
   
 * The key binaries are Rtk_MainProc, strmsrv, da_adaptor, cda, sa, StreamProxy all of none has released source code.
