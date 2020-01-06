@@ -1,4 +1,5 @@
-![D-Link DCS-8600LH](https://eu.dlink.com/uk/en/products/-/media/product-pages/dcs/8600lh/dcs_8600lh_front.png)
+<img src="https://eu.dlink.com/uk/en/products/-/media/product-pages/dcs/8600lh/dcs_8600lh_front.png" width=500>
+
 This is an attempt to get the DCS-8600LH defogged. Any help is deeply appreciated.
 
 First of all: THANKS bmork! I would not have got started without your defogger for the 8000.
