@@ -6,7 +6,8 @@ First of all: THANKS bmork! I would not have got started without your defogger f
 
 The script is totally based on bmork's original dcs8000lh-configure.py, which got me hopeful that the 8600 would be just as "easy". Since then I've changed by mind on the easy part.
 
-What's changed? The bluetoothd on the 8600 had a new patch to the gatt-example.c which quoted the arguments to set admin_passwd and tokenized the entire string received, so no semicolons (;) are possible in the otherwise arbitrary commands you can send to the default firmware with dcs8600.py.
+
+What's changed? It still abuses the set admin_passwd code to execute arbitrary commands via BTLE, but bluetoothd on the 8600 had a new patch to the gatt-example.c which quoted the arguments to set admin_passwd. Also, the entire string received is now tokenized, which means semicolons (;) are not possible in the otherwise arbitrary strings you can send to the default firmware with dcs8600.py.
 
 Also *worth noting*: If you run the wrong script (dcs8000lh-configure.py) on the 8600, it will mess up the admin_passwd. After that, no more arbitrary commands are possible. Easily fixed, but not via BTLE.
 
