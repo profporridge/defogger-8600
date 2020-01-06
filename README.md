@@ -7,12 +7,18 @@ The script is totally based on bmork's original dcs8000lh-configure.py, which go
 
 What's changed? The bluetoothd on the 8600 had a new patch to the gatt-example.c which quoted the arguments to set admin_passwd and tokenized the entire string received, so no semicolons (;) are possible in the otherwise arbitrary commands you can send to the default firmware with dcs8600.py.
 
+Also *worth noting*: If you run the wrong script (dcs8000lh-configure.py) on the 8600, it will mess up the admin_passwd. After that, no more arbitrary commands are possible. Easily fixed, but not via BTLE.
+
+If everything else fails - a factory reset will get you back on track again (hold reset button for ten seconds).
+
 Things learned so far, in no order:
 
 * My laptop refused to change MTU on the BTLE packets, so nothing got sent in it's entirety, so I did all the BTLE communication with the camera from a Raspberry Pi 3 (Raspbian stretch/9.6, Bluez 5.43)
 
 Firmware v1.00.10:
 
+* When accessing the DCS-8600LH the first time after a factory reset, the script will have no idea of the name of the unit. Fix this by modifying the script at the ####-part when setting self.name.
+  
 * Start telnetd: 
 ```
   $ dcs8600.py 00:11:22:33:44:55 012345 --telnetd
