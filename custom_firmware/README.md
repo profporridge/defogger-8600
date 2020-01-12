@@ -1,3 +1,5 @@
+NOTE: If you use this firmware, the automatic firmware upgrade will stop working.
+
 For more info, check:
 
 https://github.com/tqz/defogger-8600
