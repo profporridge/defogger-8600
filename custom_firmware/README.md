@@ -10,7 +10,7 @@ It is version 1.00.10 but with lighttpd enabled.
 
 Hints:
 ```
-  # cp -pr /etc/lighttpd /tmp/SDCard/lighttpd
+  # cp -r /etc/lighttpd /tmp/SDCard/lighttpd
 ```
   * in lighttpd.conf, define port since default ports are not available:
       server.port = 
