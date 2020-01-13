@@ -1,4 +1,5 @@
-NOTE: If you use this firmware, the automatic firmware upgrade will stop working.
+NOTE: If you use this firmware, the automatic firmware upgrade will sometimes fail. The cam will not break, just try again.
+
 
 For more info, check:
 
